@@ -8,7 +8,8 @@ archivos_excel = {
     "Encuesta 1": {"file": "Libro1.xlsx", "columns": ['Frecuencia con la que lees', 'de 1 a 7']},
     "Encuesta 2": {"file": "Libro2.xlsx", "columns": ['¿Sabes leer y escribir en castellano?', 'de 1 a 2']},
     "Encuesta 3": {"file": "Libro3.xlsx", "columns": ['¿Con qué frecuencia Realizaron la actividad de: Contar relatos, cuentos, historias?', 'de 1 a 3']},
-    "Encuesta 4": {"file": "Libro4.xlsx", "columns": ['Número de computadoras/laptops en el hogar', 'de 1 a 10']}
+    "Encuesta 4": {"file": "Libro4.xlsx", "columns": ['Número de computadoras/laptops en el hogar', 'de 1 a 10']},
+    "Encuesta 5": {"file": "Libro5.xlsx", "columns": ['Número de libros impresos en el hogar', '(0:5000)']}
 }
 
 # Crear un cuadro combinado para seleccionar el archivo de Excel
