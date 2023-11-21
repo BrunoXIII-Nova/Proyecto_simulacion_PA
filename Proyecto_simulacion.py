@@ -12,7 +12,7 @@ archivos_excel = {
 }
 
 # Crear un cuadro combinado para seleccionar el archivo de Excel
-archivo_seleccionado = st.selectbox("Selecciona un archivo de Excel", list(archivos_excel.keys()))
+archivo_seleccionado = st.selectbox("Selecciona un archivo de Excel", list(archivos_excel.keys()),index_col=list(archivos_excel.keys()[0])
 
 # Leer el archivo de Excel seleccionado
 df = pd.read_excel(f"{archivo_seleccionado}", names=archivos_excel[archivo_seleccionado])
