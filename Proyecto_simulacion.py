@@ -15,7 +15,7 @@ archivos_excel = {
 archivo_seleccionado = st.selectbox("Selecciona un archivo de Excel", list(archivos_excel.keys()))
 
 # Leer el archivo de Excel seleccionado
-df = pd.read_excel(f"{archivo_seleccionado}", names=archivos_excel[archivo_seleccionado],index_col=list(archivos_excel.keys()[0])
+df = pd.read_excel(f"{archivo_seleccionado}", names=archivos_excel[archivo_seleccionado],index_col=0)
 
 # Mostrar el DataFrame completo en Streamlit
 st.dataframe(df)
