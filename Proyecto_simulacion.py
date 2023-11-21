@@ -13,6 +13,8 @@ archivos_excel = {
     "Encuesta 5": {"file": "Libro5.xlsx", "columns": ['Número de libros impresos en el hogar', '(0:5000)']}
 }
 
+st.title('Análisis de la Encuesta Nacional de Lectura')
+
 # Crear un cuadro combinado para seleccionar el archivo de Excel
 encuesta_seleccionada = st.selectbox("Selecciona una encuesta a continuación", list(archivos_excel.keys()))
 
@@ -23,7 +25,7 @@ columnas_seleccionadas = archivos_excel[encuesta_seleccionada]["columns"]
 # Leer el archivo de Excel seleccionado
 df = pd.read_excel(f"{archivo_seleccionado}", names=columnas_seleccionadas, index_col=0)
 
-st.title('Análisis de la Encuesta Nacional de Lectura')
+
 
 # Mostrar el DataFrame completo en Streamlit
 st.dataframe(df)
