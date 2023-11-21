@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
+
 # Diccionario de archivos de Excel y sus respectivos nombres de columnas
 archivos_excel = {
     "Encuesta 1": {"file": "Libro1.xlsx", "columns": ['Frecuencia con la que lees', 'de 1 a 7']},
@@ -21,6 +22,8 @@ columnas_seleccionadas = archivos_excel[encuesta_seleccionada]["columns"]
 
 # Leer el archivo de Excel seleccionado
 df = pd.read_excel(f"{archivo_seleccionado}", names=columnas_seleccionadas, index_col=0)
+
+st.title('Análisis de la Encuesta Nacional de Lectura')
 
 # Mostrar el DataFrame completo en Streamlit
 st.dataframe(df)
