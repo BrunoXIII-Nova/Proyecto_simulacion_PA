@@ -13,7 +13,7 @@ archivos_excel = {
     "Encuesta 5": {"file": "Libro5.xlsx", "columns": ['Número de libros impresos en el hogar', '(0:5000)']}
 }
 
-st.title('Análisis de la Encuesta Nacional de Lectura')
+st.title('Encuesta Nacional de Lectura')
 
 # Crear un cuadro combinado para seleccionar el archivo de Excel
 encuesta_seleccionada = st.selectbox("Selecciona una encuesta a continuación", list(archivos_excel.keys()))
