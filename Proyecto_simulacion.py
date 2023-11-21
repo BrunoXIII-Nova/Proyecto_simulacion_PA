@@ -26,4 +26,3 @@ st.dataframe(df)
 
 df.plot(kind='bar')
 st.pyplot(plt)
-st.pyplot(plt)
