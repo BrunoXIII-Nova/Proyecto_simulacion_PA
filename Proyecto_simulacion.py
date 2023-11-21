@@ -25,5 +25,10 @@ df = pd.read_excel(f"{archivo_seleccionado}", names=columnas_seleccionadas, inde
 # Mostrar el DataFrame completo en Streamlit
 st.dataframe(df)
 
-df.plot(kind='bar')
+# Si la encuesta seleccionada es la "Encuesta 5", utilizar un histograma
+if encuesta_seleccionada == "Encuesta 5":
+    df.hist(bins=50)
+else:
+    df.plot(kind='bar')
+
 st.pyplot(plt)
