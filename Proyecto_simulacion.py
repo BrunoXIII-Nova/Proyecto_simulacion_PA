@@ -12,13 +12,18 @@ archivos_excel = {
 }
 
 # Crear un cuadro combinado para seleccionar el archivo de Excel
-archivo_seleccionado = st.selectbox("Selecciona una encuesta a continuación", list(archivos_excel.keys()))
+encuesta_seleccionada = st.selectbox("Selecciona una encuesta a continuación", list(archivos_excel.keys()))
+
+# Obtener el nombre del archivo y las columnas de la encuesta seleccionada
+archivo_seleccionado = archivos_excel[encuesta_seleccionada]["file"]
+columnas_seleccionadas = archivos_excel[encuesta_seleccionada]["columns"]
 
 # Leer el archivo de Excel seleccionado
-df = pd.read_excel(f"{archivo_seleccionado}", names=archivos_excel[archivo_seleccionado],index_col=0)
+df = pd.read_excel(f"{archivo_seleccionado}", names=columnas_seleccionadas, index_col=0)
 
 # Mostrar el DataFrame completo en Streamlit
 st.dataframe(df)
 
 df.plot(kind='bar')
+st.pyplot(plt)
 st.pyplot(plt)
