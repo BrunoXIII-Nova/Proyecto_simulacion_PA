@@ -15,19 +15,17 @@ archivos_excel = {
 
 st.title('Encuesta Nacional de Lectura')
 
-# Crear un cuadro combinado para seleccionar el archivo de Excel
+# combobox
 encuesta_seleccionada = st.selectbox("Selecciona una encuesta a continuación", list(archivos_excel.keys()))
 
-# Obtener el nombre del archivo y las columnas de la encuesta seleccionada
+# filas y columnas del grafico
 archivo_seleccionado = archivos_excel[encuesta_seleccionada]["file"]
 columnas_seleccionadas = archivos_excel[encuesta_seleccionada]["columns"]
 
-# Leer el archivo de Excel seleccionado
+# Se lee el archivo excel que seleccionamos
 df = pd.read_excel(f"{archivo_seleccionado}", names=columnas_seleccionadas, index_col=0)
 
-
-
-# Mostrar el DataFrame completo en Streamlit
+# Se muestras en la pagina
 st.dataframe(df)
 
 # Si la encuesta seleccionada es la "Encuesta 5", utilizar un histograma
